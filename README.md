@@ -1,8 +1,8 @@
 # Generate RELION Euler angles and rotation origins from UCSF Chimera sessions
 
-<strong>Overview:</strong>
+<strong>Overview</strong>
 
-
+Automatic subtomogram aligment for particle reconstruction not always produces the desired outcome. In order to guide particle reconstruction, the use of a reference may be necessary. By manually superimposing a reference density on the desired location of a subtomogram one can guide alignment, this can be done in visualization software, such as UCSF Chimera. We provide two python scripts that together take the reference alignment information from a UCSF Chimera session and produce a RELION \*.star file with initialized Euler angles and rotations origins that transform particles to the reference. This results in the alignment and superimposition of all user-defined subtomogram locations.
 
 <strong>Installation</strong>
 
