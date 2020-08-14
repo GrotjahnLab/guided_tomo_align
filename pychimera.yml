@@ -1,0 +1,11 @@
+name: pychimera
+channels:
+  - insilichem
+  - defaults
+dependencies:
+  - pychimera
+  - python=2.7
+  - jupyter
+  - numpy
+prefix: pychimera
+
