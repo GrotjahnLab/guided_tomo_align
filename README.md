@@ -85,11 +85,15 @@ It will generate the following output:
                         Name for output file containing a transformation
                         matrix for each particle.
 
-Here's an commandline example:
+Here's a commandline example:
 
 <code>python ./chim\_session\_to\_mtx.py --sessions_path /path/to/chimerasessions/ --reference_name reference.mrc --particle_name_prefix deconv_lam2_TS4 --particle_angpix 10.88 --reference_angpix 10.88 --r_box 44,44,44 --p_box 44,44,44</code>
 
-6) Then, activate the py37 environment using <code>conda activate py37</code> to run <code>mtx\_to\_star.py</code>.
+6) Deactivate the <code>pychimera</code> environment by typing <code>conda deactivate</code>. Then, activate the py37 environment using <code>conda activate py37</code> to run <code>mtx\_to\_star.py</code>.
+
+<code>python ./mtx\_to\_star.py --help</code>
+
+It will generate the following output:
 
        usage: mtx_to_star.py [-h] --template_star TEMPLATE_STAR --chimera_mtx_output
                       CHIMERA_MTX_OUTPUT
@@ -119,5 +123,8 @@ Here's an commandline example:
          --output_name OUTPUT_NAME
                         Name for output *.star file
 
+Here's a commandline example:
+
+<code>./mtx_to_star.py --template_star you_template.star --chimera_mtx_output matrix_dictionary.txt --rln_particle_particle_csv equiv.csv --angpix 10.88</code>
 
 7) There is a known issue with some UCSF Chimera installations where the libgfxinfo.so library will produce a "undefined symbol" error. We have been able to fix this by removing the pcre package from the pychimera environment: <code>conda remove --force pcre</code>
