@@ -30,9 +30,10 @@ The easiest way to manage the libraries needed to run these scripts is to instal
 
 <code>python ./chim\_session\_to\_mtx.py --help</code>
 
-It will output the following output:
+It will generate the following output:
 
-<code>usage: mtx_to_star.py [-h] --template_star TEMPLATE_STAR --chimera_mtx_output
+<plaintext>usage: mtx_to_star.py [-h] --template_star TEMPLATE_STAR --chimera_mtx_output
+  
                       CHIMERA_MTX_OUTPUT
                       [--rln_particle_particle_csv RLN_PARTICLE_PARTICLE_CSV]
                       [--angpix ANGPIX] [--output_name OUTPUT_NAME]
@@ -58,7 +59,7 @@ optional arguments:
                         should be one pair per line.
   --angpix ANGPIX       Particle pixel size.
   --output_name OUTPUT_NAME
-                        Name for output *.star file</code>
+                        Name for output *.star file</plaintext>
 
 Here's an commandline example:
 
