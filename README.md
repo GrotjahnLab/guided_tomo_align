@@ -17,6 +17,7 @@ The easiest way to manage the libraries needed to run these scripts is to instal
 2) Clone this repository:
 
 <code>git clone https://github.com/GrotjahnLab/guided_tomo_align.git</code>
+
 <code>cd guided_tomo_align</code>
 
 3) For the pychimera library to work, you need to install UCSF Chimera and direct pychimera to its directory. See pychimeras' help for more information, specially points 2 and 4 in this <a href="https://pychimera.readthedocs.io/en/latest/install.html">page</a>. Avoiding launching of the UCSF Chimera GUI may be desirable, specially when working from a computing cluster. For this, make sure you obtain the UCSF Chimera "headless" version. In order to execute the downloaded \*.bin file, make it into an executable by running <code>chmod +x ucsfchimera\_download.bin</code>. Finally, set the CHIMERADIR environment variable (in bash): <code>export CHIMERADIR=/your/chimera/intallation/dir/</code>
@@ -24,6 +25,7 @@ The easiest way to manage the libraries needed to run these scripts is to instal
 4) Create <code>pychimera</code> and <code>py37</code> using the provided \*.yml files:
 
 <code>conda env create -f ./pychimera.yml</code>
+
 <code>conda env create -f ./py37.yml</code>
 
 5) First, activate the pychimera environment using <code>conda activate pychimera</code> to run <code>chim\_session\_to\_mtx.py</code>. You can print a help message typing:
