@@ -62,7 +62,11 @@ def write_star(fname,opt_df,par_df,is_rln_31):
 
 def reconstitute_dict_from_file(infile):
     f = open(infile,'r')
-    lines = [ i[:-1] for i in f.readlines() ]
+    lines = []
+    for i in f.readlines():
+        i = i.replace("\r","")
+        i = i.replace("\n","")
+        lines.append(i)
     f.close()
     output_dict = {}
     for line in lines:
@@ -72,7 +76,11 @@ def reconstitute_dict_from_file(infile):
 
 def get_name_dict(infile):
     f = open(infile,'r')
-    lines = [ i[:-1] for i in f.readlines() ]
+    lines = []
+    for i in f.readlines():
+        i = i.replace("\r","")
+        i = i.replace("\n","")
+        lines.append(i)
     f.close()
     output_dict = {}
     for line in lines:
@@ -116,8 +124,11 @@ if __name__ == "__main__":
     for particle in [ n.split('/')[-1] for n in new_part_df_only_entries["_rlnImageName"] ]:
         angpix = 1.0
         if in_angs: angpix = args.angpix
-        try: mtx = np.array(recons_mtx_dict[particle_name_dict[particle]])
-        except KeyError: sys.exit('Particle %s does not have a Chimera matrix! Exiting.'%particle)
+        try: chim_ses_name = particle_name_dict[particle]
+        except KeyError: sys.exit('Particle %s is not in the recognized name in equivalence file or Chimera session.'%particle)
+        try: mtx = np.array(recons_mtx_dict[chim_ses_name])
+        except KeyError: sys.exit('Particle %s does not have a Chimera matrix! Exiting.'%chim_ses_name)
+        print('%s processed OK'%particle)
         container.append(get_eulers_and_translation(mtx,angpix))
     
     container = np.array(container)
