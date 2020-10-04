@@ -118,7 +118,7 @@ It will generate the following output:
                         between the naming of particles in the *.star file and
                         chimera sessions. E.g., if a particle is named "Partic
                         les/Tomograms/tomogram101/tomogram101_subtomo000004.mr
-                        c" in the star file, and "tomo1_4.mrc" in the Chimersa
+                        c" in the star file, and "tomo1_4.mrc" in the Chimera
                         session, the *.csv file should have a line with the
                         following format:
                         "tomogram101_subtomo000004.mrc,tomo1_4.mrc". There
