@@ -166,13 +166,13 @@ Here's a commandline example:
 
 <strong>Usage of UCSF Chimera fitmap script for automatically generating trivial docks</strong>
 
-1) First, activate the pychimera environment using <code>conda activate pychimera</code> to run <code>dockTomo.py</code>. You can print a help message typing:
+1) First, activate the pychimera environment using <code>conda activate pychimera</code> to run <code>chim_session_to_mtx.py</code>. You can print a help message typing:
 
-<code>python ./dockTomo.py --help</code>
+<code>python ./chim_session_to_mtx.py --help</code>
 
 It will generate the following output:
 
-    usage: dockTomo.py [-h] --subtomogram_path SUBTOMOGRAM_PATH --reference_path
+    usage: chim_session_to_mtx.py [-h] --subtomogram_path SUBTOMOGRAM_PATH --reference_path
                    REFERENCE_PATH --s_angpix S_ANGPIX --r_angpix R_ANGPIX
                    --s_level S_LEVEL --r_level R_LEVEL
 
@@ -197,4 +197,4 @@ It will generate the following output:
 
 Here's a commandline example:
 
-<code>python ./dockTomo.py --subtomogram\_path ./tomogram1\_subtomo000007\_gaussian.mrc --reference\_path ./dynactin\_resampled.8p52.mrc --s\_angpix 8.25 --r\_angpix 8.25 --s\_level 1.25 --r\_level 0.036</code>
+<code>python ./chim_session_to_mtx.py --subtomogram\_path ./tomogram1\_subtomo000007\_gaussian.mrc --reference\_path ./dynactin\_resampled.8p52.mrc --s\_angpix 8.25 --r\_angpix 8.25 --s\_level 1.25 --r\_level 0.036</code>
