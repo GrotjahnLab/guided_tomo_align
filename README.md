@@ -164,3 +164,37 @@ Here's a commandline example:
 
 <code>python ./shift\_particles\_starfile.py --template\_star skeletondata.init_from_Chimera.star --angpix 8.52 --translation 0,0,-15 --particle\_box\_size 96,96,96</code>
 
+<strong>Usage of UCSF Chimera fitmap script for automatically generating trivial docks</strong>
+
+1) First, activate the pychimera environment using <code>conda activate pychimera</code> to run <code>dockTomo.py</code>. You can print a help message typing:
+
+<code>python ./dockTomo.py --help</code>
+
+It will generate the following output:
+
+    usage: dockTomo.py [-h] --subtomogram_path SUBTOMOGRAM_PATH --reference_path
+                   REFERENCE_PATH --s_angpix S_ANGPIX --r_angpix R_ANGPIX
+                   --s_level S_LEVEL --r_level R_LEVEL
+
+    This script uses the UCSF Chimera fitmap function to generate sessions with a
+    reference density of interest docked in a series of subtomograms. We recomend
+    to first open a few subtomograms along the reference to evaluate ideal
+    isosurface countour levels. See Volume Viewer > Level in the UCSF Chimera
+    graphical interface.
+
+    optional arguments:
+      -h, --help            show this help message and exit
+      --subtomogram_path SUBTOMOGRAM_PATH
+                        Absolute path to directory where all subtomograms are
+                        stored, e.g., "/User/sessions/*.mrc"
+      --reference_path REFERENCE_PATH
+                        Absolute path to reference density. E.g.,
+                        "./low_passed_ribosome.mrc"
+      --s_angpix S_ANGPIX   Pixel size of subtomograms
+      --r_angpix R_ANGPIX   Pixel size of references
+      --s_level S_LEVEL     Subtomogram isosurface contour level
+      --r_level R_LEVEL     Reference isosurface contour level
+
+Here's a commandline example:
+
+<code>python ./dockTomo.py --subtomogram\_path ./tomogram1\_subtomo000007\_gaussian.mrc --reference\_path ./dynactin\_resampled.8p52.mrc --s\_angpix 8.25 --r\_angpix 8.25 --s\_level 1.25 --r\_level 0.036</code>
