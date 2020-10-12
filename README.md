@@ -164,7 +164,7 @@ Here's a commandline example:
 
 <code>python ./shift\_particles\_starfile.py --template\_star skeletondata.init_from_Chimera.star --angpix 8.52 --translation 0,0,-15 --particle\_box\_size 96,96,96</code>
 
-<strong>Usage of UCSF Chimera fitmap script for automatically generating trivial docks</strong>
+<strong>Usage of UCSF Chimera fitmap iterator</strong>
 
 1) First, activate the pychimera environment using <code>conda activate pychimera</code> to run <code>chim_session_to_mtx.py</code>. You can print a help message typing:
 
