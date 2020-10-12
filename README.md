@@ -166,9 +166,9 @@ Here's a commandline example:
 
 <strong>Usage of UCSF Chimera fitmap iterator</strong>
 
-1) First, activate the pychimera environment using <code>conda activate pychimera</code> to run <code>chimera_fitmap_search.py</code>. You can print a help message typing:
+1) First, activate the pychimera environment using <code>conda activate pychimera</code> to run <code>chimera\_fitmap\_search.py</code>. You can print a help message typing:
 
-<code>python ./chimera_fitmap_search.py --help</code>
+<code>python ./chimera\_fitmap\_search.py --help</code>
 
 It will generate the following output:
 
@@ -197,4 +197,8 @@ It will generate the following output:
 
 Here's a commandline example:
 
-<code>python ./chimera_fitmap_search.py --subtomogram\_path ./tomogram1\_subtomo000007\_gaussian.mrc --reference\_path ./dynactin\_resampled.8p52.mrc --s\_angpix 8.25 --r\_angpix 8.25 --s\_level 1.25 --r\_level 0.036</code>
+<code>python ./chimera\_fitmap\_search.py --subtomogram\_path ./tomogram1\_subtomo000007\_gaussian.mrc --reference\_path ./dynactin\_resampled.8p52.mrc --s\_angpix 8.25 --r\_angpix 8.25 --s\_level 1.25 --r\_level 0.036</code>
+
+If you are interested in only running the fitmap iterator, and you already have the chimera command line interpreter, we provide a version of chimera_fitmap_search.py (chimera_fitmap_search_quick.py) that you can run using, for example:
+
+<code>chimera --nogui --script "chimera\_fitmap\_search\_quick.py --subtomogram_path ./tomogram1_subtomo000007_gaussian.mrc --reference_path ./dynactin_resampled.8p52.mrc --s_angpix 8.25 --r_angpix 8.25 --s_level 1.25 --r_level 0.036" </code>
